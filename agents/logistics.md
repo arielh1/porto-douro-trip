@@ -13,4 +13,3 @@ duplication. In lock, verify and correct rather than redesign. Never edit itiner
 facts, preferences, other research, stays, or convergence state.
 
 Stdout: three lines led by any blocker raised or cleared.
-

@@ -13,4 +13,3 @@ nothing material, say so plainly. Never modify facts, preferences, research, sta
 open questions, itinerary, or state.
 
 Stdout: three lines beginning with `converging`, `still churning`, or `not ready`.
-

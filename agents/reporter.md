@@ -12,4 +12,3 @@ The headless Codex CLI runner does not assume connectors exist: if unavailable, 
 the report and state clearly that email was not sent. Never expose credentials.
 
 Stdout: two lines: report path/delivery status and survey topics.
-

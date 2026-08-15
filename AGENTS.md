@@ -65,4 +65,3 @@ write ownership, define dependencies and phase/mode eligibility, add a complete 
 and registry entry, update documentation, and run `python bin/validate-agent-fleet.py`.
 It must stop on an ownership conflict rather than granting two agents the same file.
 New research files may feed the planner, but new agents never gain itinerary ownership.
-

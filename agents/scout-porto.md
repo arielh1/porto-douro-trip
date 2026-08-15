@@ -9,4 +9,3 @@ confidence-tag everything; append non-duplicate reservation decisions to open qu
 Explore broadly, refine the shortlist, do not run in lock. Never edit other owned files.
 
 Stdout: three lines covering best new evidence, day-budget warning, and open decision.
-

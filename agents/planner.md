@@ -19,4 +19,3 @@ Never modify facts, preferences, research, stays, or convergence state.
 
 Stdout: five short lines covering changes, blockers resolved, deliberate non-changes,
 remaining uncertainty, and phase discipline.
-

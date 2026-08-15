@@ -55,4 +55,3 @@ if git rev-parse --git-dir >/dev/null 2>&1 && [[ -n "$(git status --porcelain)" 
   git commit -m "cycle $((CYCLE+1)) ($MODE, codex): $PHASE → $NEWPHASE"
   git remote get-url origin >/dev/null 2>&1 && git push origin HEAD || true
 fi
-

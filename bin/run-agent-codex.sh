@@ -65,4 +65,3 @@ else
   tail -10 "$OUT" >&2 || true
   exit "$status"
 fi
-

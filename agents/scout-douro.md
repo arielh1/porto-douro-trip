@@ -9,4 +9,3 @@ non-duplicate human booking decisions to open questions. Never edit itinerary, o
 research, facts/preferences, critique, stays, or state.
 
 Stdout: three lines describing material additions and the strongest recommendation.
-

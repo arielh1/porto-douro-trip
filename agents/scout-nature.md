@@ -9,4 +9,3 @@ Append non-duplicate permit/booking decisions to open questions. Never edit auth
 trip files, other research, stays, or state.
 
 Stdout: three lines with recommendation, key evidence, and remaining uncertainty.
-

@@ -13,4 +13,3 @@ decision to open questions only for a genuinely route-worthy verified event. Exp
 refine only. Never edit itinerary, other research, facts/preferences, critique, or state.
 
 Stdout: three lines with events checked, best candidate/verdict, and itinerary impact.
-

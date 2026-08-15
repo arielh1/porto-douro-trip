@@ -18,4 +18,3 @@ requests a Claude counterpart. Show the resulting graph and ownership diff.
 
 Stdout: five lines covering created files, ownership, graph placement, validation, and
 any action the human must take.
-

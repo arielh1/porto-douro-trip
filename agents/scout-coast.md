@@ -9,4 +9,3 @@ human decisions to open questions. Explore, then refine; do not run in lock. Nev
 the itinerary or another agent's file.
 
 Stdout: three lines led by rental/legal-sleep status.
-

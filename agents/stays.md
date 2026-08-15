@@ -11,4 +11,3 @@ Append urgent, non-duplicate bookings to open questions. Never edit trip facts,
 preferences, itinerary, critique, research, or state.
 
 Stdout: three lines with coverage counts, verification gaps, and best find.
-

@@ -99,4 +99,3 @@ morning/evening writes cannot overlap. Do not enable or add credentials during m
 Scheduled desktop tasks should clone/pull a clean branch, run one fresh cycle, and push
 the generated commit. Reporter email additionally requires an authenticated Gmail
 capability; a headless CLI must not assume the desktop connector exists.
-
