@@ -5,22 +5,32 @@ then moves the resolved question to the bottom.
 
 ## 🔴 Blocking
 
-- [ ] **Exact flight times** — arrival time at OPO on Fri 11 Sept, and departure time
-      from LIS on Sun 27 Sept. Day 1 and Day 17 can't be planned properly without them.
-      (Dates themselves are now confirmed — see `trip/facts.md`.)
+- [x] **Exact flight times** — ✅ resolved 15 Aug 2026, full itinerary received from
+      Shani's forwarded Mytrip email. Porto arrival **23:25** on 11 Sept (very late —
+      Day 1 evening plan needs to be cut entirely). Lisbon departure **14:30** on
+      27 Sept (short last morning). See `trip/facts.md` for the full flight table.
+- [ ] **Nature reserve length — 2-3 nights or 3-4 nights?** A prior AI-planning handoff
+      document says "3-4 nights" was the working plan; Ariel's direct answer during
+      fleet setup said the reserve should be short. Current itinerary uses 2 nights.
+      If Ariel wants it longer, the 17-day total needs to flex somewhere (probably one
+      fewer coast night, or one more day overall).
 
 ## 🟠 Important — shapes the plan
 
-- [ ] **One-way campervan rental Porto → Lisbon** — is this booked or even confirmed
-      possible? This is the highest-risk logistical item in the trip. (`logistics`)
-      **Update (scout-coast, cycle 2):** confirmed *possible* — Indie Campers,
-      Yescapa, Roadsurfer, Portugal by Van and others all run Porto↔Lisbon depots
-      and treat one-way as a standard route `[likely]`. What's still missing: an
-      actual quote for late-September 2026 dates (one-way fee is dynamic, not a
-      published flat number) and a decision on **compact campervan with
-      campsite showers vs. larger van with an onboard shower/toilet** — this
-      trades off drivability on narrow coastal/village roads against comfort.
-      See `research/coast.md` for sources.
+- [ ] **Campervan for the coastal leg — one-way Porto → Lisbon is one option, not the
+      only one.** Not something that has to happen; worth deciding rather than
+      defaulting into. (`logistics`)
+      **Update (scout-coast, cycle 2):** one-way is *confirmed possible* — Indie
+      Campers, Yescapa, Roadsurfer, Portugal by Van and others all run Porto↔Lisbon
+      depots and treat it as a standard route `[likely]`. But it's worth weighing
+      against the alternatives before committing: a **round-trip rental** (drive the
+      van back to Porto at the end, or skip the van and use a regular car for the
+      coast leg too) may be simpler or cheaper depending on the one-way fee, which
+      still needs an actual quote for late-September 2026 dates (it's dynamic, not a
+      published flat number). If going with a van, there's also a comfort call —
+      **compact campervan with campsite showers vs. larger van with an onboard
+      shower/toilet** — that trades off drivability on narrow coastal/village roads
+      against comfort. See `research/coast.md` for sources.
 - [ ] **How the car/van handover works** — return the Douro car in Porto and collect the
       van the same day, or overlap a night?
       **Update (logistics, cycle 2 morning):** same-day is *possible* — Gerês→Porto
@@ -40,8 +50,11 @@ then moves the resolved question to the bottom.
       Ericeira + 1 Lisbon). A 3rd Gerês night (Pedra Bela day) is still an open
       preference if Ariel wants an 18-day trip instead — not forced either way.
       (`planner`, cycle 2)
-- [ ] **Ariel's surf level** — determines whether Peniche's Supertubos is even relevant
-      or whether it's Baleal beach breaks and Foz do Lizandro. Safety-relevant.
+- [x] **Ariel's surf level** — ✅ resolved 15 Aug 2026: intermediate, surfed 3x
+      (Sri Lanka), rides a hard 5'8" board. Supertubos is still too advanced/heavy for
+      this level — stick with Baleal beach breaks, Foz do Lizandro, and Ribeira
+      d'Ilhas on a good day. Not certain he'll buy a board — `scout-coast` should
+      research rental alongside purchase.
 - [ ] Budget per night, and total budget.
 - [ ] Dietary restrictions.
 
