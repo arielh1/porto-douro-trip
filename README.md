@@ -72,6 +72,37 @@ bin/run-cycle.sh --dry       # show what would run
 python3 bin/convergence.py status    # phase, cycle count, stability history
 ```
 
+### Codex / OpenAI engine
+
+The repository is dual-engine. Codex uses `AGENTS.md`, platform-neutral specifications
+in `agents/`, and the same `trip/`, `research/`, `stays/`, and `state/` as Claude.
+
+```bash
+python3 bin/validate-agent-fleet.py
+bin/run-agent-codex.sh planner
+bin/run-agent-codex.sh --dry critic
+bin/run-cycle-codex.sh morning --dry
+bin/run-cycle-codex.sh morning
+bin/run-cycle-codex.sh evening
+```
+
+| Codex agent | Responsibility | Authoritative output |
+|---|---|---|
+| scout-douro | Douro bases, wine, food, harvest | `research/douro.md` |
+| scout-nature | northern reserve and walks | `research/nature.md` |
+| scout-porto | short Porto arrival | `research/porto.md` |
+| scout-coast | campervan coast and surf | `research/coast.md` |
+| festival-scout | exceptional trance/techno events | `research/festivals.md` |
+| stays | lodging and legal overnight candidates | `stays/` |
+| logistics | feasibility and vetoes | `research/logistics.md` |
+| planner | authoritative itinerary | `trip/itinerary.md` |
+| critic | independent audit | `trip/critique.md` |
+| reporter | human-readable report; optional email | `state/report.*` |
+| agent-author | safe fleet extension | fleet infrastructure |
+
+See `docs/OPENAI-AGENT-ARCHITECTURE.md` for ownership, scheduling, manual invocation,
+and the agent-creation workflow.
+
 Two scheduled tasks run these automatically — morning and evening, Israel time.
 Each one clones this repo, runs a cycle, and pushes the result, so **the git history
 is the record of how the plan converged**.
