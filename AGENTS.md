@@ -21,6 +21,7 @@ Read inputs in this order: `trip/facts.md`, current critique and logistics block
 | `stays/` | `stays`. |
 | `state/phase`, `state/cycle`, `state/convergence.jsonl`, `state/snapshots/` | `bin/convergence.py` only. |
 | `state/report.html`, `state/report.txt` | `reporter` via `bin/build-report.py`. |
+| `state/map*`, `state/trip-map*` | `mapmaker` via `bin/mapkit/build_map.py`. |
 | `agents/registry.json`, `agents/*.md`, fleet docs/runners/tests | `agent-author` only when explicitly asked to add or revise an agent. |
 
 No agent may invent flights, dates, bookings, prices, opening hours, availability,

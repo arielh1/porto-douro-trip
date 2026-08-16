@@ -38,5 +38,12 @@ class AgentFleetTests(unittest.TestCase):
             *(set(a["writes"]) for a in self.registry["agents"].values())
         ))
 
+    def test_food_and_map_agents(self):
+        self.assertEqual(self.registry["agents"]["scout-food"]["writes"][0], "research/food.md")
+        self.assertIn("scout-food", self.registry["cycles"]["morning"][0])
+        self.assertEqual(self.registry["agents"]["mapmaker"]["modes"], [])
+        self.assertIn("state/map.html", self.registry["agents"]["mapmaker"]["writes"])
+        self.assertTrue((ROOT / "bin/mapkit/build_map.py").is_file())
+
 if __name__ == "__main__":
     unittest.main()

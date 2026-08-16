@@ -40,7 +40,7 @@ than Claude-specific tool names.
 
 The complete machine-checkable map is `agents/registry.json`; `AGENTS.md` defines its
 human meaning. Morning's first stage is the disjoint research set: Douro, nature, Porto,
-coast, festivals, and stays. Those authoritative outputs differ, so processes run in
+coast, festivals, cross-trip food, and stays. Those authoritative outputs differ, so processes run in
 parallel. `trip/open-questions.md` is an explicitly shared append surface: agents must
 append non-duplicate questions and preserve existing text. Logistics waits for research;
 planner waits for logistics; critic waits for planner; convergence waits for critic.
@@ -49,6 +49,10 @@ Evening starts at logistics.
 `reporter` is registered but intentionally outside the convergence cycle, matching the
 existing repository. It can be invoked manually. Email is connector-dependent; report
 generation is portable and delivery failure must be explicit.
+
+`mapmaker` is also manual. It consumes the accepted itinerary, research, and stays after
+the planner, then uses `bin/mapkit/build_map.py` to regenerate interactive HTML plus KML
+and CSV imports. It owns only generated map state and cannot change trip decisions.
 
 ## Runtime abstraction
 
@@ -69,6 +73,7 @@ python3 bin/validate-agent-fleet.py
 bin/run-agent-codex.sh --dry planner
 bin/run-agent-codex.sh planner
 bin/run-agent-codex.sh reporter
+bin/run-agent-codex.sh mapmaker
 bin/run-cycle-codex.sh morning --dry
 bin/run-cycle-codex.sh morning
 bin/run-cycle-codex.sh evening

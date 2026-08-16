@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Registry-driven Codex equivalent of run-cycle.sh. Does not alter Claude runtime.
+# Registry-driven Codex cycle runner; manual-only agents remain outside this graph.
 set -uo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -13,8 +13,8 @@ for arg in "$@"; do
     *) echo "usage: bin/run-cycle-codex.sh [morning|evening] [--dry]" >&2; exit 2 ;;
   esac
 done
-PHASE="$(python3 bin/convergence.py phase 2>/dev/null || echo explore)"
-CYCLE="$(cat state/cycle 2>/dev/null || echo 0)"
+PHASE="$(python3 bin/convergence.py phase 2>/dev/null | tr -d '\r' || echo explore)"
+CYCLE="$(tr -d '\r' < state/cycle 2>/dev/null || echo 0)"
 echo "Codex fleet: cycle $((CYCLE+1)) ($MODE), phase $PHASE"
 if [[ "$PHASE" == "converged" ]]; then echo "Itinerary has converged; nothing to do."; exit 0; fi
 

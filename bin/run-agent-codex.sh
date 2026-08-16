@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run one registered fleet agent in a fresh, non-interactive Codex process.
+# Run one registered fleet agent, including manual-only roles, in a fresh Codex process.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -26,8 +26,8 @@ print(", ".join(a["writes"]))
 PY
 )
 SPEC="${META[0]}"
-PHASE="$(python3 bin/convergence.py phase 2>/dev/null || echo explore)"
-CYCLE="$(cat state/cycle 2>/dev/null || echo 0)"
+PHASE="$(python3 bin/convergence.py phase 2>/dev/null | tr -d '\r' || echo explore)"
+CYCLE="$(tr -d '\r' < state/cycle 2>/dev/null || echo 0)"
 NEXT=$((CYCLE + 1))
 
 PROMPT="You are the '$NAME' agent in this repository's Codex travel fleet.
