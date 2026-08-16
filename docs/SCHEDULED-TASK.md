@@ -58,6 +58,35 @@ Identical, except step 2 runs:
 The evening cycle skips fresh scouting. It re-checks feasibility, integrates the day's
 research, and scores convergence. Mornings widen the plan; evenings tighten it.
 
+## Optional visual digest task
+
+Use this as a separate scheduled task when you want a human-friendly gallery email with
+images, Google Maps links, and review links for places the itinerary is already converging on.
+
+```
+Run the visual digest task for the Porto/Douro/Gerês trip planner.
+
+1. Clone the private repo:
+     gh repo clone <OWNER>/porto-douro-trip /tmp/trip
+     cd /tmp/trip
+
+2. Read AGENTS.md, then run:
+     python3 bin/validate-agent-fleet.py
+     python3 bin/build-visual-report.py
+
+   If the Codex CLI is available and configured, you may instead run:
+     bin/run-agent-codex.sh visual-reporter
+
+3. If the generated HTML changed, commit and push it.
+
+4. Report back briefly in Hebrew:
+   - whether `state/visual-report.html` changed
+   - which places were highlighted
+   - whether the environment had an authenticated mail capability; if not, say the HTML is ready but mail was not sent
+
+Do not ask clarifying questions. Do not invent photos or review links.
+```
+
 ---
 
 ## Why it converges instead of churning forever

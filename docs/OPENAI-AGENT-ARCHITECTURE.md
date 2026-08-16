@@ -52,6 +52,12 @@ waits for critic. Evening starts at logistics.
 existing repository. It can be invoked manually. Email is connector-dependent; report
 generation is portable and delivery failure must be explicit.
 
+`visual-reporter` is also manual. It consumes the accepted itinerary, research, and any
+stay evidence to build a more visual HTML digest with place cards, remote images when
+already present in repository evidence, Google Maps search links, and direct review/source
+links. It is decision support for humans, not a planner, and it owns only
+`state/visual-report.*`.
+
 `mapmaker` is also manual. It consumes the accepted itinerary, research, and stays after
 the planner, then uses `bin/mapkit/build_map.py` to regenerate interactive HTML plus KML
 and CSV imports. It owns only generated map state and cannot change trip decisions.
@@ -76,6 +82,7 @@ python3 bin/validate-agent-fleet.py
 bin/run-agent-codex.sh --dry planner
 bin/run-agent-codex.sh planner
 bin/run-agent-codex.sh reporter
+bin/run-agent-codex.sh visual-reporter
 bin/run-agent-codex.sh mapmaker
 bin/run-cycle-codex.sh morning --dry
 bin/run-cycle-codex.sh morning
