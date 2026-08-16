@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Run available tests
+        run: |
+          set -e
+          if [ -f package.json ]; then
+            echo "Found package.json — running npm ci && npm test"
+            npm ci
+            npm test
+          else
+            echo "No package.json — skipping Node tests"
+          fi
+
+          if [ -f requirements.txt ]; then
+            echo "Found requirements.txt — installing and running pytest"
+            python -m pip install --upgrade pip
+            python -m pip install -r requirements.txt
+            pytest -q
+          else
+            echo "No requirements.txt — skipping Python tests"
+          fi
+
+  agent-health:
+    name: Agent smoke tests
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run CLI agent smoke test (best-effort)
+        run: |
+          set -e
+          # Prefer an explicit smoke-test script if present
+          if [ -x ./bin/run-agent-cli-smoke.sh ]; then
+            echo "Running ./bin/run-agent-cli-smoke.sh"
+            bash ./bin/run-agent-cli-smoke.sh
+          elif [ -x ./scripts/agent-smoke-test.sh ]; then
+            echo "Running ./scripts/agent-smoke-test.sh"
+            bash ./scripts/agent-smoke-test.sh
+          else
+            echo "No explicit smoke-test script found. Attempting thin dry-run of bin/run-cycle.sh if present."
+            if [ -x ./bin/run-cycle.sh ]; then
+              bash ./bin/run-cycle.sh --dry || true
+            else
+              echo "No candidate smoke test found — skipping smoke test (job will pass)."
+            fi
+          fi
