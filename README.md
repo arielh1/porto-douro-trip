@@ -11,8 +11,10 @@ churning forever.
 
 ## The fleet
 
-Six agents. Each is a real headless `claude -p` process with its own spec in
-`.claude/agents/`. They never talk to each other directly — they coordinate only
+The fleet consists of focused research, planning, audit, and rendering agents. Claude
+roles use `.claude/agents/`; Codex roles use the platform-neutral registry in
+`agents/`. Each invocation is a fresh process. They never talk to each other directly —
+they coordinate only
 through files in this repo, which is what makes each cycle reproducible and
 reviewable as a git diff.
 
@@ -22,10 +24,12 @@ reviewable as a git diff.
 | 🌲 `scout-nature` | `research/nature.md` | The short reserve stop north of the Douro |
 | 🏙 `scout-porto` | `research/porto.md` | Porto — the opening days, food, port houses |
 | 🌊 `scout-coast` | `research/coast.md` | The campervan leg: van rental, where you may sleep, beaches, surf |
+| 🍽 `scout-food` | `research/food.md` | Cross-trip local restaurant verification (Codex) |
 | 🛏 `stays` | `stays/` | One folder per place they sleep — the case for it, the catch, and original photos |
 | 🚗 `logistics` | `research/logistics.md` | Drive times, car **and van**, **tasting-then-driving** — has veto power |
 | 🗺 `planner` | `trip/itinerary.md` | The only agent that writes the itinerary |
 | 🔍 `critic` | `trip/critique.md` | Adversarial review — never touches the itinerary |
+| 🧭 `mapmaker` | `state/map*`, `state/trip-map*` | On-demand interactive map and import files (Codex) |
 
 The planner/critic split is the important one. One agent writes, another attacks,
 and the planner must answer every objection in writing before the next cycle.
@@ -71,6 +75,39 @@ bin/run-cycle.sh --dry       # show what would run
 
 python3 bin/convergence.py status    # phase, cycle count, stability history
 ```
+
+### Codex / OpenAI engine
+
+The repository is dual-engine. Codex uses `AGENTS.md`, platform-neutral specifications
+in `agents/`, and the same `trip/`, `research/`, `stays/`, and `state/` as Claude.
+
+```bash
+python3 bin/validate-agent-fleet.py
+bin/run-agent-codex.sh planner
+bin/run-agent-codex.sh --dry critic
+bin/run-cycle-codex.sh morning --dry
+bin/run-cycle-codex.sh morning
+bin/run-cycle-codex.sh evening
+```
+
+| Codex agent | Responsibility | Authoritative output |
+|---|---|---|
+| scout-douro | Douro bases, wine, food, harvest | `research/douro.md` |
+| scout-nature | northern reserve and walks | `research/nature.md` |
+| scout-porto | short Porto arrival | `research/porto.md` |
+| scout-coast | campervan coast and surf | `research/coast.md` |
+| festival-scout | exceptional trance/techno events | `research/festivals.md` |
+| scout-food | locally recommended restaurants across all bases | `research/food.md` |
+| stays | lodging and legal overnight candidates | `stays/` |
+| logistics | feasibility and vetoes | `research/logistics.md` |
+| planner | authoritative itinerary | `trip/itinerary.md` |
+| critic | independent audit | `trip/critique.md` |
+| reporter | human-readable report; optional email | `state/report.*` |
+| mapmaker | interactive map, KML, and CSV imports (manual) | `state/map*`, `state/trip-map*` |
+| agent-author | safe fleet extension | fleet infrastructure |
+
+See `docs/OPENAI-AGENT-ARCHITECTURE.md` for ownership, scheduling, manual invocation,
+and the agent-creation workflow.
 
 Two scheduled tasks run these automatically — morning and evening, Israel time.
 Each one clones this repo, runs a cycle, and pushes the result, so **the git history
