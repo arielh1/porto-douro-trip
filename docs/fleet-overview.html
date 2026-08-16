@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Porto → Douro → Gerês Fleet Overview</title>
+  <style>
+    :root {
+      --bg: #f6f2eb;
+      --card: #ffffff;
+      --ink: #2a2320;
+      --muted: #6e625d;
+      --accent: #7a3040;
+      --line: #eadfd4;
+      --soft: #f9f6f2;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #7a3040, #9b4b52);
+      color: #fff;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.08);
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
+    .hero p {
+      margin: 0;
+      max-width: 72ch;
+      opacity: .95;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.04);
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      color: var(--accent);
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 8px 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    th {
+      color: var(--muted);
+      font-weight: 700;
+      background: var(--soft);
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #efe3e5;
+      color: #6f2734;
+      font-size: 12px;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .muted { color: var(--muted); }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin: 4px 0; }
+    code {
+      background: #f3ece7;
+      padding: 1px 5px;
+      border-radius: 5px;
+      font-size: 90%;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #faf7f4;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .footer {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Porto → Douro → Gerês Agent Fleet</h1>
+      <p>
+        A deterministic, file-mediated travel-planning system for Ariel and Shani's
+        September 2026 Portugal trip. Agents coordinate only through repository files,
+        so every cycle is auditable and reproducible.
+      </p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Project at a glance</h2>
+        <ul>
+          <li><b>Goal:</b> produce and converge on <code>trip/itinerary.md</code>.</li>
+          <li><b>Inputs:</b> <code>trip/facts.md</code>, <code>trip/preferences.md</code>, research, and state.</li>
+          <li><b>Rules:</b> human-only facts stay human-only; all other files have explicit owners.</li>
+          <li><b>Phases:</b> <code>explore</code> → <code>refine</code> → <code>lock</code> → <code>converged</code>.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Runtime model</h2>
+        <div class="mono">Human facts
+  ↓
+Regional research + stays
+  ↓
+logistics (feasibility / veto)
+  ↓
+planner (authoritative itinerary)
+  ↓
+critic (adversarial audit)
+  ↓
+convergence scoring</div>
+      </section>
+
+      <section class="card">
+        <h2>Cycle stages</h2>
+        <p><span class="pill">Morning</span> research-heavy</p>
+        <div class="mono">Stage 1: scout-douro, scout-nature, scout-porto, scout-coast,
+         festival-scout, stays
+Stage 2: logistics + scout-food
+Stage 3: planner
+Stage 4: critic</div>
+        <p><span class="pill">Evening</span> consolidation</p>
+        <div class="mono">Stage 1: logistics
+Stage 2: planner
+Stage 3: critic</div>
+      </section>
+    </div>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Ownership rules</h2>
+        <ul>
+          <li><code>trip/itinerary.md</code> is planner-only.</li>
+          <li><code>trip/critique.md</code> is critic-owned, with logistics allowed to write only its blockers section.</li>
+          <li><code>trip/open-questions.md</code> is shared append-only.</li>
+          <li><code>research/*.md</code> is owned by the matching research agent.</li>
+          <li><code>stays/</code>, <code>state/report.*</code>, and <code>state/map*</code> each have a single owner.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Important coordination notes</h2>
+        <ul>
+          <li><code>scout-food</code> depends on the four regional scouts so it can consume fresh research.</li>
+          <li><code>planner</code> waits for both <code>logistics</code> and <code>scout-food</code>.</li>
+          <li><code>reporter</code> and <code>mapmaker</code> are manual, not part of the convergence cycle.</li>
+          <li><code>agent-author</code> owns the fleet infrastructure docs, runners, validator, and registry.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:14px;">
+      <h2>Agents and responsibilities</h2>
+      <table>
+        <tr>
+          <th>Agent</th>
+          <th>Owns</th>
+          <th>Job</th>
+        </tr>
+        <tr><td>scout-douro</td><td><code>research/douro.md</code></td><td>Douro valley, quintas, harvest, villages, valley walks</td></tr>
+        <tr><td>scout-nature</td><td><code>research/nature.md</code></td><td>Nature segment north of the Douro</td></tr>
+        <tr><td>scout-porto</td><td><code>research/porto.md</code></td><td>Porto arrival, food, port houses, neighborhoods</td></tr>
+        <tr><td>scout-coast</td><td><code>research/coast.md</code></td><td>Atlantic campervan leg, beach access, surf, van logistics</td></tr>
+        <tr><td>festival-scout</td><td><code>research/festivals.md</code></td><td>Verified electronic-music events worth bending the route for</td></tr>
+        <tr><td>scout-food</td><td><code>research/food.md</code></td><td>Cross-trip restaurant verification across all bases</td></tr>
+        <tr><td>stays</td><td><code>stays/</code></td><td>Accommodation candidates, photos, booking evidence</td></tr>
+        <tr><td>logistics</td><td><code>research/logistics.md</code>, <code>trip/critique.md</code></td><td>Feasibility, drive times, legal overnight constraints, vetoes</td></tr>
+        <tr><td>planner</td><td><code>trip/itinerary.md</code></td><td>Authoritative day-by-day plan</td></tr>
+        <tr><td>critic</td><td><code>trip/critique.md</code></td><td>Independent audit of the itinerary</td></tr>
+        <tr><td>reporter</td><td><code>state/report.html</code>, <code>state/report.txt</code></td><td>Human-readable report and optional email</td></tr>
+        <tr><td>mapmaker</td><td><code>state/map*</code>, <code>state/trip-map*</code></td><td>Interactive map and import artifacts</td></tr>
+        <tr><td>agent-author</td><td>Fleet infra</td><td>Safely updates specs, registry, runners, docs, and validation</td></tr>
+      </table>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Repo hotspots</h2>
+        <ul>
+          <li><code>AGENTS.md</code> and <code>agents/registry.json</code> define authority and scheduling.</li>
+          <li><code>bin/run-cycle.sh</code> and <code>bin/run-cycle-codex.sh</code> orchestrate cycles.</li>
+          <li><code>bin/validate-agent-fleet.py</code> checks ownership, dependencies, and graph invariants.</li>
+          <li><code>docs/OPENAI-AGENT-ARCHITECTURE.md</code> explains the dual-engine model.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Non-goals</h2>
+        <ul>
+          <li>No invented flights, bookings, prices, or opening hours.</li>
+          <li>No hidden state outside the repository.</li>
+          <li>No itinerary churn for its own sake in <code>refine</code> or <code>lock</code>.</li>
+          <li>No changing trip content in this overview document.</li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="footer">
+      Generated as a static overview for the fleet and the project. Open this file in a browser
+      or share it as an HTML attachment.
+    </p>
+  </div>
+</body>
+</html>
