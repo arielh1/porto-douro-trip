@@ -24,12 +24,15 @@ reviewable as a git diff.
 | 🌲 `scout-nature` | `research/nature.md` | The short reserve stop north of the Douro |
 | 🏙 `scout-porto` | `research/porto.md` | Porto — the opening days, food, port houses |
 | 🌊 `scout-coast` | `research/coast.md` | The campervan leg: van rental, where you may sleep, beaches, surf |
+| 🎵 `festival-scout` | `research/festivals.md` | Exceptional trance / techno events worth bending the route for |
 | 🍽 `scout-food` | `research/food.md` | Cross-trip local restaurant verification (Codex) |
 | 🛏 `stays` | `stays/` | One folder per place they sleep — the case for it, the catch, and original photos |
 | 🚗 `logistics` | `research/logistics.md` | Drive times, car **and van**, **tasting-then-driving** — has veto power |
 | 🗺 `planner` | `trip/itinerary.md` | The only agent that writes the itinerary |
 | 🔍 `critic` | `trip/critique.md` | Adversarial review — never touches the itinerary |
+| 📨 `reporter` | `state/report.*` | Human-readable report and optional email delivery |
 | 🧭 `mapmaker` | `state/map*`, `state/trip-map*` | On-demand interactive map and import files (Codex) |
+| 🛠 `agent-author` | fleet infra | Safe changes to specs, registry, runners, docs, and validation |
 
 The planner/critic split is the important one. One agent writes, another attacks,
 and the planner must answer every objection in writing before the next cycle.
@@ -89,6 +92,11 @@ bin/run-cycle-codex.sh morning --dry
 bin/run-cycle-codex.sh morning
 bin/run-cycle-codex.sh evening
 ```
+
+Codex uses a finer-grained morning graph than Claude: regional scouts + `festival-scout`
++ `stays` run first, then `logistics` and `scout-food` run in parallel, then `planner`,
+then `critic`. Claude intentionally keeps its older five-scout runner because there are no
+Claude specs for `festival-scout` or `scout-food`.
 
 | Codex agent | Responsibility | Authoritative output |
 |---|---|---|

@@ -6,11 +6,12 @@ private copy of the trip.
 ```text
 Human → trip/facts.md + trip/preferences.md
                          │
-      parallel research agents + stays
+       stage 1: regional scouts + festivals + stays
                          │
-                         ▼
-                     logistics ── veto → trip/critique.md
-                         │
+          ┌──────────────┴──────────────┐
+          ▼                             ▼
+ stage 2: logistics ── veto → critique  scout-food
+          └──────────────┬──────────────┘
                          ▼
                       planner → trip/itinerary.md
                          │
@@ -39,12 +40,13 @@ than Claude-specific tool names.
 ## Ownership and graph
 
 The complete machine-checkable map is `agents/registry.json`; `AGENTS.md` defines its
-human meaning. Morning's first stage is the disjoint research set: Douro, nature, Porto,
-coast, festivals, cross-trip food, and stays. Those authoritative outputs differ, so processes run in
-parallel. `trip/open-questions.md` is an explicitly shared append surface: agents must
-append non-duplicate questions and preserve existing text. Logistics waits for research;
-planner waits for logistics; critic waits for planner; convergence waits for critic.
-Evening starts at logistics.
+human meaning. Morning's first stage is the disjoint regional set: Douro, nature, Porto,
+coast, festivals, and stays. `scout-food` is intentionally separate because it consumes
+fresh regional research; it runs in the second stage alongside `logistics`, which does not
+need restaurant research for feasibility. `trip/open-questions.md` is an explicitly shared
+append surface: agents must append non-duplicate questions and preserve existing text.
+Planner waits for both `logistics` and `scout-food`; critic waits for planner; convergence
+waits for critic. Evening starts at logistics.
 
 `reporter` is registered but intentionally outside the convergence cycle, matching the
 existing repository. It can be invoked manually. Email is connector-dependent; report
@@ -64,7 +66,8 @@ is carried between processes. Git diffs plus convergence snapshots form the audi
 The Codex runner uses the non-interactive `codex exec` entry point. Before production,
 run `codex --help` and `codex exec --help` on the target host. This migration host exposed
 a desktop-bundled executable but Windows denied shell execution, so live runtime testing
-was not possible here; dry-run and registry validation remain deterministic.
+was not possible here; dry-run and registry validation remain deterministic. `.gitattributes`
+pins `*.sh` to LF so Git Bash can execute them on Windows hosts after fresh checkouts.
 
 ## Commands
 
