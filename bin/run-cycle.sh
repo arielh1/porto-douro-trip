@@ -23,8 +23,8 @@ mkdir -p "$LOGDIR" state/snapshots
 STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 RUNLOG="$LOGDIR/cycle-$STAMP-$MODE.log"
 
-PHASE="$(python3 bin/convergence.py phase 2>/dev/null || echo explore)"
-CYCLE="$(cat state/cycle 2>/dev/null || echo 0)"
+PHASE="$(python3 bin/convergence.py phase 2>/dev/null | tr -d '\r' || echo explore)"
+CYCLE="$(tr -d '\r' < state/cycle 2>/dev/null || echo 0)"
 NEXT=$((CYCLE + 1))
 
 c()  { printf '\033[%sm%s\033[0m\n' "$1" "$2"; }
@@ -121,7 +121,7 @@ hr
 python3 bin/convergence.py score
 hr
 
-NEWPHASE="$(cat state/phase 2>/dev/null || echo explore)"
+NEWPHASE="$(tr -d '\r' < state/phase 2>/dev/null || echo explore)"
 
 # ── phase 6: commit ───────────────────────────────────────────────────────────
 if git rev-parse --git-dir >/dev/null 2>&1 && [[ -n "$(git status --porcelain)" ]]; then

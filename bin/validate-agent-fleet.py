@@ -9,6 +9,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "agents" / "registry.json"
 REQUIRED = {"spec", "mission", "reads", "writes", "phases", "modes", "depends_on"}
+AGENT_AUTHOR_REQUIRED_WRITES = {
+    ".gitattributes",
+    "AGENTS.md",
+    "README.md",
+    "agents",
+    "bin/run-agent-codex.sh",
+    "bin/run-cycle-codex.sh",
+    "bin/run-cycle.sh",
+    "bin/validate-agent-fleet.py",
+    "docs/OPENAI-AGENT-ARCHITECTURE.md",
+    "docs/SCHEDULED-TASK.md",
+}
 
 def main() -> int:
     errors: list[str] = []
@@ -77,6 +89,13 @@ def main() -> int:
     if "trip/itinerary.md" in agents.get("critic", {}).get("writes", []): errors.append("critic may not write itinerary")
     if not {"research/logistics.md", "trip/critique.md"}.issubset(agents.get("logistics", {}).get("writes", [])):
         errors.append("logistics veto contract missing")
+    missing_agent_author = AGENT_AUTHOR_REQUIRED_WRITES - set(agents.get("agent-author", {}).get("writes", []))
+    if missing_agent_author:
+        errors.append(f"agent-author must own fleet infra files {sorted(missing_agent_author)}")
+    if set(agents.get("scout-food", {}).get("depends_on", [])) != {"scout-douro", "scout-nature", "scout-porto", "scout-coast"}:
+        errors.append("scout-food must depend on the regional research producers it consumes")
+    if not {"logistics", "scout-food"}.issubset(agents.get("planner", {}).get("depends_on", [])):
+        errors.append("planner must wait for logistics and scout-food in morning mode")
 
     if errors:
         for err in errors: print("ERROR:", err)
