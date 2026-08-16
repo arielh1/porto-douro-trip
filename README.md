@@ -31,6 +31,7 @@ reviewable as a git diff.
 | 🗺 `planner` | `trip/itinerary.md` | The only agent that writes the itinerary |
 | 🔍 `critic` | `trip/critique.md` | Adversarial review — never touches the itinerary |
 | 📨 `reporter` | `state/report.*` | Human-readable report and optional email delivery |
+| 🖼 `visual-reporter` | `state/visual-report.*` | Visual digest with place cards, images, Google Maps, and review links |
 | 🧭 `mapmaker` | `state/map*`, `state/trip-map*` | On-demand interactive map and import files (Codex) |
 | 🛠 `agent-author` | fleet infra | Safe changes to specs, registry, runners, docs, and validation |
 
@@ -111,6 +112,7 @@ Claude specs for `festival-scout` or `scout-food`.
 | planner | authoritative itinerary | `trip/itinerary.md` |
 | critic | independent audit | `trip/critique.md` |
 | reporter | human-readable report; optional email | `state/report.*` |
+| visual-reporter | visual place digest; optional email | `state/visual-report.*` |
 | mapmaker | interactive map, KML, and CSV imports (manual) | `state/map*`, `state/trip-map*` |
 | agent-author | safe fleet extension | fleet infrastructure |
 

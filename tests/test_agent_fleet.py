@@ -25,7 +25,9 @@ class AgentFleetTests(unittest.TestCase):
     def test_cycle_order_and_parallel_research(self):
         morning = self.registry["cycles"]["morning"]
         self.assertGreater(len(morning[0]), 1)
-        self.assertEqual(morning[-3:], [["logistics"], ["planner"], ["critic"]])
+        self.assertEqual(morning[-2:], [["planner"], ["critic"]])
+        self.assertIn("logistics", morning[1])
+        self.assertIn("scout-food", morning[1])
         self.assertEqual(self.registry["cycles"]["evening"], [["logistics"], ["planner"], ["critic"]])
 
     def test_critical_ownership(self):
@@ -40,10 +42,17 @@ class AgentFleetTests(unittest.TestCase):
 
     def test_food_and_map_agents(self):
         self.assertEqual(self.registry["agents"]["scout-food"]["writes"][0], "research/food.md")
-        self.assertIn("scout-food", self.registry["cycles"]["morning"][0])
+        self.assertIn("scout-food", self.registry["cycles"]["morning"][1])
         self.assertEqual(self.registry["agents"]["mapmaker"]["modes"], [])
         self.assertIn("state/map.html", self.registry["agents"]["mapmaker"]["writes"])
         self.assertTrue((ROOT / "bin/mapkit/build_map.py").is_file())
+
+    def test_visual_reporter_agent(self):
+        agent = self.registry["agents"]["visual-reporter"]
+        self.assertEqual(agent["writes"], ["state/visual-report.html", "state/visual-report.txt"])
+        self.assertEqual(agent["modes"], [])
+        self.assertIn("planner", agent["depends_on"])
+        self.assertTrue((ROOT / "bin/build-visual-report.py").is_file())
 
 if __name__ == "__main__":
     unittest.main()
