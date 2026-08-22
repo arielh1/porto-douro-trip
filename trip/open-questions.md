@@ -152,6 +152,19 @@ then moves the resolved question to the bottom.
       (Sun 13 Sept, Campanha station), rather than leaving it as a general
       someday-book item. (`planner`, cycle 2)
 
+- [ ] **Return-flight change — waiting for the updated e-ticket.** Mytrip's booking page
+      shows the Porto/Lisbon trip order as confirmed for two passengers (submitted by
+      Shanie on 22 Aug 2026), but it does **not** show replacement flight numbers or
+      times. A return option via Frankfurt (LIS 12:35 → TLV 23:15, 1h20 connection)
+      is being checked by the call centre; treat it as unconfirmed until Mytrip/Lufthansa
+      sends the revised ticket. Do not alter the return-flight facts or last-day plan yet.
+      [unverified]
+
+- [ ] **Campervan — Ariel says the campervan option is no longer wanted to reduce cost.**
+      Record the replacement coastal transport plan (likely one regular rental car) and
+      revised overnight arrangement in `trip/facts.md` before the itinerary is rebuilt.
+      [confirmed — direct human instruction, 22 Aug 2026]
+
 ## ✅ Resolved
 
 - **Where does the trip end?** → **Lisbon (LIS)**, open-jaw. (2026-08-15)
