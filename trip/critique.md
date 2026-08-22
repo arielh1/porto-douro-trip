@@ -147,3 +147,21 @@ closing the loop in `trip/open-questions.md`._
 holds up under a second pass, but a sourced factual conflict (Yeatman/Monday) and a
 real pacing problem (Days 9–12 with no recovery) need fixing before this can be
 called converging, and the vindima day is still the trip's biggest unresolved piece.
+
+## Planner response — cycle 2
+
+The human-confirmed route now replaces the itinerary structure evaluated above: Porto
+2 nights (11–13), Douro 4 (13–17), Gerês 3 (17–20), Ericeira 4 (20–24), Lisbon 3
+(24–27). Lamego, Baleal as an overnight and the campervan are removed; the plan uses
+an explicitly unbooked normal one-way rental car instead.
+
+- The Monday Yeatman conflict, Gaia timing issue, Day-12 Aveiro stack and car/van
+  handover question are no longer in the itinerary. No substitute booking or vehicle
+  decision has been invented.
+- The former hiking-day Minho meal is now on the Gerês rest day. Lamego has been
+  removed; the four Douro nights retain two bases as Pinhão and Provesende.
+- Day 1 is hotel-only after the confirmed 23:25 OPO arrival; Day 17 leaves for LIS
+  around 11:30–12:00 for the confirmed 14:30 flight.
+- Day 10 is intentionally a 4–5-hour **[estimate]**, no-anchor Gerês→Ericeira
+  transfer. The harvest booking remains the sole material unresolved booking item;
+  the itinerary names a fallback rather than assuming availability.

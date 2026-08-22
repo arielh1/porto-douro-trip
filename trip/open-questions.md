@@ -142,6 +142,13 @@ then moves the resolved question to the bottom.
       (Sun 13 Sept, Campanha station), rather than leaving it as a general
       someday-book item. (`planner`, cycle 2)
 
+- [x] **Final route and base split — confirmed by Ariel, 22 Aug 2026.** Porto ×2
+      nights (11–13 Sep) → Douro ×4 (13–17) → Gerês ×3 (17–20) → Ericeira ×4
+      (20–24) → Lisbon ×3 (24–27). Lamego and Baleal are not overnight bases;
+      the campervan is dropped in favour of an unbooked normal one-way rental car.
+      The human-maintained facts file should be updated separately. [confirmed —
+      direct human instruction]
+
 ## ✅ Resolved
 
 - **Where does the trip end?** → **Lisbon (LIS)**, open-jaw. (2026-08-15)
