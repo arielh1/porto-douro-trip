@@ -107,6 +107,17 @@ def build():
           <p class="hint">אפשר פשוט לענות על המייל הזה.</p>
         </div>"""
 
+    stay_html = """
+  <div class="card stay-card">
+    <div class="card-title">🏡 לינה בפורטו — מועמדת, עדיין לא הוזמנה</div>
+    <div class="stay-name">Gallery Townhouse &amp; Home · 11–13.9</div>
+    <p class="stay-copy">חדר אחרון: <b>Standard Suite</b> · €327.25 לשני לילות / €163.63 ללילה<br>
+    כ־₪1,143 לשהות / כ־₪571 ללילה <span class="estimate">(הערכת ECB)</span></p>
+    <p class="stay-warning"><b>חשוב לפני הזמנה:</b> הצ׳ק־אין המפורסם מסתיים ב־00:00, והטיסה נוחתת ב־23:25. צריך אישור כתוב לצ׳ק־אין אחרי חצות לפני שמזמינים.</p>
+    <p class="stay-note">לא מתאימה ל־21–22.9: במלון יש מינימום שני לילות.</p>
+    <a class="stay-link" href="https://www.booking.com/hotel/pt/gallery-townhouse-amp-home.en-gb.html">לפרטי ההזמנה והקישור הישיר ›</a>
+  </div>"""
+
     html = f"""<!DOCTYPE html>
 <html dir="rtl" lang="he">
 <head>
@@ -139,6 +150,14 @@ def build():
   .qbody {{ color:#666; font-size:12.5px; }}
   .hint {{ font-size:11.5px; color:#999; margin:10px 0 0; }}
   .whats-new {{ font-size:13.5px; line-height:1.6; color:#3a332c; }}
+  .stay-card {{ border:1px solid #ead9b9; }}
+  .stay-name {{ font-weight:700; font-size:14px; color:#40342d; }}
+  .stay-copy {{ margin:7px 0; font-size:13px; line-height:1.55; }}
+  .estimate {{ color:#777; font-size:12px; }}
+  .stay-warning {{ margin:9px 0; padding:9px 10px; background:#fff4e4; border-radius:8px;
+                   color:#754b16; font-size:12.5px; line-height:1.55; }}
+  .stay-note {{ margin:7px 0; color:#666; font-size:12.5px; }}
+  .stay-link {{ display:inline-block; margin-top:3px; color:#6b2b3a; font-size:13px; font-weight:700; }}
   .footer {{ text-align:center; font-size:11px; color:#aaa; margin-top:18px; }}
 </style>
 </head>
@@ -156,6 +175,8 @@ def build():
     <div class="card-title">✨ מה חדש</div>
     <div class="whats-new">{latest_change or status or "עדיין אין עדכון."}</div>
   </div>
+
+  {stay_html}
 
   <div class="card">
     <div class="card-title">📍 מבט כללי</div>
@@ -176,6 +197,11 @@ def build():
 
 מה חדש:
 {latest_change or status}
+
+לינה בפורטו — מועמדת, עדיין לא הוזמנה:
+Gallery Townhouse & Home, 11–13.9. Standard Suite (חדר אחרון): €327.25 לשני לילות / €163.63 ללילה; כ־₪1,143 / ₪571 ללילה (הערכת ECB).
+חשוב: הצ׳ק־אין המפורסם מסתיים ב־00:00, והטיסה נוחתת ב־23:25. חייבים אישור כתוב לצ׳ק־אין אחרי חצות לפני הזמנה. לא מתאימה ל־21–22.9, בגלל מינימום שני לילות.
+https://www.booking.com/hotel/pt/gallery-townhouse-amp-home.en-gb.html
 
 (הגרסה המלאה עם כל הפירוט מצורפת כ-HTML)
 """

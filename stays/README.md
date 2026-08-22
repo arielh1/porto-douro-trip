@@ -14,7 +14,7 @@ are few and go early.
 | Segment | Place | Nights | Price/night | Pool | Status |
 |---|---|---|---|---|---|
 | Porto arrival + handover | [100 Contos](100-contos/) | 11–13 Sep; 21–22 Sep | live quote pending; expected below ₪1,200 ceiling | No | shortlisted |
-| Porto arrival + handover | [Gallery Townhouse & Home](gallery-townhouse/) | 11–13 Sep; 21–22 Sep | live quote pending; benchmark €128.83 | No | shortlisted |
+| Porto arrival | [Gallery Townhouse & Home](gallery-townhouse/) | 11–13 Sep | €163.63–199.75/night verified (≈₪571–698 [estimate]) | No | shortlisted |
 | Porto arrival + handover | [Cedofeita Downtown Airbnb](cedofeita-downtown-airbnb/) | 11–13 Sep; 21–22 Sep | live quote pending | No | candidate |
 | Porto arrival + handover | [Charming Cedofeita Flat Airbnb](charming-cedofeita-airbnb/) | 11–13 Sep; 21–22 Sep | live quote pending | No | candidate |
 

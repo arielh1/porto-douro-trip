@@ -1,12 +1,15 @@
 # Gallery Townhouse & Home — Porto arrival / handover
 
 - **Segment / nights:** Porto, 11–13 September (2 nights) and 21–22 September 2026 (1 night); 2 adults.
-- **Status:** shortlisted — check live dates and room type.
+- **Status:** shortlisted — arrival block is date-verified; the one-night handover block is not bookable under the property's two-night minimum.
 - **Where / why it fits:** Cedofeita/art-district townhouse with garden and a more intimate scale than a conventional city hotel. It is well positioned for the Clérigos/Lello core while retaining a residential feel. [likely] [property listing](https://www.booking.com/hotel/pt/gallery-townhouse-amp-home.en-gb.html)
 - **Arrival practicality:** listed check-in is 15:00–00:00, with arrival time required in advance. This does **not** cover the expected after-midnight arrival; get a written late-arrival exception before booking 11 September. [confirmed] [house rules](https://www.booking.com/hotel/pt/gallery-townhouse-amp-home.en-gb.html)
-- **Actual-date price / availability:** exact 11–13 and 21–22 September 2026 rates were not exposed publicly. A current third-party benchmark is €128.83 for 1 night / 2 adults, not a quote for these dates. [unverified] [Booking search result](https://www.booking.com/booking-home/city/pt/aldoar.lv.html)
+- **Actual-date price / availability (checked 2026-08-22, official engine; 2 adults):**
+  - **11–13 September 2026, 2 nights:** Standard Suite — **1 room left**, €327.25 total / €163.63 per night (about **₪1,143 total / ₪571 nightly** [estimate]); Standard Apartment — **1 left**, €390.15 total / €195.08 nightly (about **₪1,362 / ₪681** [estimate]); Deluxe Apartment — **1 left**, €399.50 total / €199.75 nightly (about **₪1,395 / ₪698** [estimate]). All three sit within Ariel's ₪1,200-per-night ceiling.
+  - Deluxe Double, King, King Terrace and Deluxe Suite were unavailable for that arrival block.
+  - **21–22 September 2026, 1 night:** inventory appears but the property imposes a **two-night minimum**, so no one-night booking is available.
+  - ILS figures use €1 = ₪3.4917, the ECB reference rate checked 2026-08-22; they are conversion estimates, not a charge quote. [confirmed] [ECB EUR/ILS reference rate](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-ils.fr.html)
 - **Minimum stay / parking / breakfast / pool:** minimum stay and parking charge need live checking; breakfast and a garden are advertised; no pool advertised. [likely] [Booking](https://www.booking.com/hotel/pt/gallery-townhouse-amp-home.en-gb.html)
 - **Review synthesis:** 9.1/10 across ~1,542 Booking reviews. Recurring strengths are the carefully considered design, friendly young staff, intimate breakfast, garden/quietness and walkability. The catch is operational rather than experiential: standard check-in ends at midnight and one source mentions a €100 damage deposit. [likely] [reviews / rules](https://www.booking.com/hotel/pt/gallery-townhouse-amp-home.en-gb.html)
-- **Honest catch:** Romantic and characterful, but it is only a real contender for Night 1 if it will support a delayed flight.
+- **Honest catch:** Romantic, characterful and within budget for the first two nights, but it is only a real contender for Night 1 if it will support a delayed flight. Published check-in ends at 00:00; obtain a written late-arrival exception before booking. It cannot cover the 21 September one-night handover as currently configured.
 - **Direct booking:** [property booking page](https://www.booking.com/hotel/pt/gallery-townhouse-amp-home.en-gb.html)
-
