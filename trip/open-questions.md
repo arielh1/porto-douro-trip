@@ -60,6 +60,16 @@ then moves the resolved question to the bottom.
 
 ## 🟡 Nice to resolve early — things that book out
 
+- [ ] **Porto stays — decide whether the first two nights must be a staffed guesthouse or may be an Airbnb with written post-midnight self-check-in.** The flight lands OPO at 23:25, so this is a real access constraint, not a preference. Current locally characterful candidates in `stays/`: **100 Contos** (best guesthouse fit; must confirm late access), **Gallery Townhouse & Home** (check-in published only until 00:00), and Airbnb flats **Cedofeita Downtown** / **Charming Cedofeita Flat** (both require live date-price checks and written late-access confirmation). Ariel has now set a ceiling of **₪1,200 per night** for Porto; please choose a booking channel/shortlist so exact total, taxes and cancellation terms can be verified.
+
+- [ ] **Porto sleep base — choose and book an authentic small guesthouse / locally
+      hosted apartment in Cedofeita/Rosário (or quiet Bolhão/Aliados fallback) for
+      11–13 Sep and 21 Sep.** The 11 Sep flight reaches OPO at 23:25, so obtain
+      written confirmation of after-midnight check-in before payment. Ariel has
+      indicated a working ceiling of **₪0–1,200/night** in conversation; confirm
+      whether that ceiling is inclusive of taxes/fees and whether a staffed reception
+      is preferred over secure self-check-in. (`scout-porto`, cycle 3)
+
 - [ ] **Vindima (harvest) experience — URGENT.** Douro harvest 2026 is estimated
       ~10 Sept–5 Oct, peaking the last two weeks of September. Sources advise booking
       3-4 months ahead; **it is already August 2026**. Ariel explicitly wants a harvest

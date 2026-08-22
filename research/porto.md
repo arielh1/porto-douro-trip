@@ -1,6 +1,68 @@
 # Porto — research
 _Last updated: 2026-08-15 · cycle 2_
 
+## Cycle 3 — authentic-stay and visitor-review read (22 Aug 2026)
+
+### The right *type* of stay for this couple
+
+For the late Friday **11 September** arrival (OPO 23:25; realistically after
+midnight at the door), the best fit is a **small licensed guesthouse, locally run
+apartment, or independent 3–4-star hotel in Cedofeita / the Clérigos edge**, rather
+than a design-luxury hotel or a Ribeira riverfront room. This is a recommendation,
+not a claim of availability: require a written confirmation of late self/hosted
+check-in before paying. The same area is also practical for the one-night Porto
+return on **Monday 21 September**. [likely]
+
+- **Cedofeita / Rosário:** strongest character-to-convenience balance: residential
+  streets, cafés and galleries, walkable to the historic core. This is the preferred
+  search zone.
+- **Bolhão / Aliados:** best value and transit access; choose a quiet side street,
+  because the main shopping corridors are busier. Good if a guesthouse is meaningfully
+  cheaper than Cedofeita.
+- **Miragaia:** more old-Porto atmosphere and river proximity, but hills and fewer
+  late-night practical services make it a secondary choice after a midnight arrival.
+- **Avoid using Ribeira as the sleep base** unless a room is demonstrably quiet:
+  it is excellent for an evening walk but visitor-oriented and noisier than the brief
+  calls for. [likely]
+
+Review evidence supports the *guesthouse* category, rather than establishing a
+specific booking: Booking's Cedofeita guesthouse results currently show **Boavista
+Guest House 8.9/10 from 1,933 reviews**; recurring guest comments praise staff,
+breakfast and the walkable/metro-connected location. **A Portuguesa Guest House**
+has **8.1/10 from 3,421 reviews**, with recurring positives for a quiet central street
+and helpful staff. These are discovery signals only—both rate and room inventory must
+be checked for the actual dates, and neither snippet verifies an after-midnight
+arrival policy. [likely]
+Source: [Booking — Cedofeita guesthouses](https://www.booking.com/guest-house/district/pt/porto/cedofeita.en-gb.html) (results observed 2026-08-22).
+
+**Review-informed lodging screen (apply to every hotel/Airbnb before booking):**
+read the newest 10 reviews *and* all one- and two-star reviews for (1) street/noise
+and soundproofing, (2) stairs/lift and luggage access, (3) shower/AC reliability,
+and (4) host responsiveness after 23:30. For an Airbnb, only select a listing with
+many recent stays, a review trail that specifically confirms check-in, and a
+no-surprise late-arrival plan; an attractive renovated flat alone is not enough.
+
+### What recent visitors actually say — food and sights
+
+These are review patterns, not universal facts; counts/date stamps make the evidence
+auditable and avoid turning a single review into a recommendation.
+
+| Place | Review signal | Practical read for Ariel & Shani | Evidence |
+|---|---|---|---|
+| **Café Santiago** | Long-running, no-frills Francesinha institution; recent visitor reviews praise the sauce and accommodating service, while also noting that the sandwich is exceptionally heavy and queues are normal. Tripadvisor labels it a Travelers' Choice business. | Good shared **lunch** once, ideally off-peak; do not make it the arrival dinner or plan a second Francesinha meal. | [Tripadvisor](https://www.tripadvisor.com/Restaurant_Review-g189180-d1931762-Reviews-Cafe_Santiago-Porto_Porto_District_Northern_Portugal.html), [recent review aggregation](https://wanderlog.com/place/details/36490/caf%C3%A9-santiago) (reviews dated Dec 2025; read 2026-08-22) [likely] |
+| **Livraria Lello** | Tripadvisor had **18,938 reviews** when checked. The repeated positive is the staircase/interior; repeated negatives in Apr–Aug 2026 are crowding, waits even with timed entry, and limited value if no book is wanted. | Optional only. If they care about architecture, take the first slot and accept it as a short photo stop; otherwise protect the relaxed Porto day and skip it. | [Tripadvisor](https://www.tripadvisor.com/Attraction_Review-g189180-d7777636-Reviews-Livraria_Lello-Porto_Porto_District_Northern_Portugal.html) (review count and recent reviews observed 2026-08-22) [likely] |
+| **São Bento station** | Tripadvisor had **4,921 reviews** when checked. Visitors consistently call the tile hall exceptional and free; the recurring downside is crowds / people blocking a working station, with recent reviewers recommending early or late timing. | Keep it: a five-to-ten-minute, high-payoff stop on the walking route; go early and do not treat it as a museum visit. | [Tripadvisor](https://www.tripadvisor.com/Attraction_Review-g189180-d2259445-Reviews-Sao_Bento_Railway_Station-Porto_Porto_District_Northern_Portugal.html) (review count and reviews dated Apr–Jul 2026) [likely] |
+| **Clérigos Tower** | Tripadvisor shows **4.3/5 from 8,978 reviews**. The dominant upside is the 360° view and central location; the recurring downside is narrow, crowded stairs and poor fit for anyone with mobility/claustrophobia concerns. | A worthwhile early-day climb only if both feel fresh; otherwise the city/bridge views already deliver the day. Book ahead if retained. | [Tripadvisor](https://www.tripadvisor.com/Attraction_Review-g189180-d243637-Reviews-Torre_dos_Clerigos-Porto_Porto_District_Northern_Portugal.html) (observed 2026-08-22) [likely] |
+
+### Date-specific arrival correction
+
+The earlier “arrival-day dinner/short walk” text below is superseded by the confirmed
+flight facts: the 11 September OPO arrival is 23:25, so there is **no realistic
+dinner or walk**. Arrange the airport-to-door transfer and check-in, then sleep. The
+next Porto stay is 21 September, not a departure-airport night—the trip flies home
+from Lisbon. [confirmed]
+Source: `trip/facts.md` (human-maintained, read 2026-08-22).
+
 ## Arrival day plan
 
 Assume a ~6h flight from Israel, likely with one connection, landing in the afternoon
